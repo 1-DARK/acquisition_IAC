@@ -4,10 +4,7 @@ const aj = arcjet({
   key: process.env.ARCJET_KEY,
   rules: [
     shield({ mode: 'LIVE' }),
-    detectBot({ // Removed bot detection because Postman requests may be detected as bots.
-      mode: 'LIVE',
-      allow: ['CATEGORY:SEARCH_ENGINE', 'CATEGORY:PREVIEW'],
-    }),
+
     slidingWindow({
       mode: 'LIVE',
       interval: '2s',
@@ -28,7 +25,10 @@ export default aj;
 //   rules: [
 //     shield({ mode: 'LIVE' }),
 
-//     // Removed bot detection because Postman requests may be detected as bots.
+//        detectBot({ // Removed bot detection because Postman requests may be detected as bots.
+// mode: 'LIVE',
+// allow: ['CATEGORY:SEARCH_ENGINE', 'CATEGORY:PREVIEW'],
+// }),
 
 //     slidingWindow({
 //       mode: 'LIVE',
