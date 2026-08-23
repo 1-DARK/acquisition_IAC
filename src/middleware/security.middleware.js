@@ -6,19 +6,13 @@ const securityMiddleware = async (req, res, next) => {
   try {
     const role = req.user?.role || 'guest';
 
-    let limit;
+    const limits = {
+      admin: 20,
+      user: 10,
+      guest: 5,
+    };
 
-    switch (role) {
-      case 'admin':
-        limit = 20;
-        break;
-      case 'user':
-        limit = 10;
-        break;
-      case 'guest':
-        limit = 5;
-        break;
-    }
+    const limit = limits[role] || limits.guest;
 
     const client = aj.withRule(
       slidingWindow({
@@ -38,28 +32,24 @@ const securityMiddleware = async (req, res, next) => {
         path: req.path,
       });
 
-      return res
-        .status(403)
-        .json({
-          error: 'Forbidden',
-          message: 'Automated requests are not allowed',
-        });
+      return res.status(403).json({
+        error: 'Forbidden',
+        message: 'Automated requests are not allowed',
+      });
     }
 
     if (decision.isDenied() && decision.reason.isShield()) {
-      logger.warn('Shield Blocked request', {
+      logger.warn('Shield blocked request', {
         ip: req.ip,
         userAgent: req.get('User-Agent'),
         path: req.path,
         method: req.method,
       });
 
-      return res
-        .status(403)
-        .json({
-          error: 'Forbidden',
-          message: 'Request blocked by security policy',
-        });
+      return res.status(403).json({
+        error: 'Forbidden',
+        message: 'Request blocked by security policy',
+      });
     }
 
     if (decision.isDenied() && decision.reason.isRateLimit()) {
@@ -69,20 +59,24 @@ const securityMiddleware = async (req, res, next) => {
         path: req.path,
       });
 
-      return res
-        .status(403)
-        .json({ error: 'Forbidden', message: 'Too many requests' });
+      return res.status(429).json({
+        error: 'Too Many Requests',
+        message: 'Too many requests',
+      });
     }
 
     next();
   } catch (e) {
-    console.error('Arcjet middleware error:', e);
-    res
-      .status(500)
-      .json({
-        errro: 'Internal server error',
-        message: 'Something went wrong with security middleware',
-      });
+    logger.error('Arcjet middleware error', {
+      error: e.message,
+      stack: e.stack,
+    });
+
+    return res.status(500).json({
+      error: 'Internal server error',
+      message: 'Something went wrong with security middleware',
+    });
   }
 };
+
 export default securityMiddleware;
