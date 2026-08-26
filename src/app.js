@@ -4,8 +4,8 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import authRoutes from './routes/auth.routes.js'
-import usersRoutes from './routes/user.routes.js'
+import authRoutes from './routes/auth.routes.js';
+import usersRoutes from './routes/user.routes.js';
 import securityMiddleware from './middleware/security.middleware.js';
 
 const app = express();
@@ -22,7 +22,7 @@ app.use(
   })
 );
 
-app.use(securityMiddleware)
+app.use(securityMiddleware);
 
 app.get('/health', (req, res) => {
   res
