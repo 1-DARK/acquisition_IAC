@@ -755,3 +755,24 @@
 {"level":"info","message":"::1 - - [26/Aug/2026:11:08:28 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisitions-api"}
 {"level":"info","message":"::1 - - [26/Aug/2026:11:08:58 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisitions-api"}
 {"level":"info","message":"::1 - - [26/Aug/2026:11:09:28 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from acquisition","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [04/Oct/2026:05:19:35 +0000] \"GET / HTTP/1.1\" 200 22 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.140.0 Chrome/150.0.7871.250 Electron/43.7.3 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [04/Oct/2026:05:19:36 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.140.0 Chrome/150.0.7871.250 Electron/43.7.3 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [04/Oct/2026:05:20:12 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.140.0 Chrome/150.0.7871.250 Electron/43.7.3 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [04/Oct/2026:05:20:28 +0000] \"GET /api HTTP/1.1\" 200 42 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.140.0 Chrome/150.0.7871.250 Electron/43.7.3 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"127.0.0.1 - - [04/Oct/2026:06:15:23 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"127.0.0.1 - - [04/Oct/2026:06:15:23 +0000] \"GET /api HTTP/1.1\" 200 42 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"127.0.0.1 - - [04/Oct/2026:06:15:23 +0000] \"GET /nonexistence HTTP/1.1\" 404 27 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from acquisition","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [04/Oct/2026:06:17:32 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.140.0 Chrome/150.0.7871.250 Electron/43.7.3 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [04/Oct/2026:06:17:35 +0000] \"GET /kdcedkfe HTTP/1.1\" 404 27 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.140.0 Chrome/150.0.7871.250 Electron/43.7.3 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [04/Oct/2026:06:18:34 +0000] \"GET /kdcedkfenc%20ednde HTTP/1.1\" 404 27 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.140.0 Chrome/150.0.7871.250 Electron/43.7.3 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"127.0.0.1 - - [04/Oct/2026:06:18:39 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"127.0.0.1 - - [04/Oct/2026:06:18:39 +0000] \"GET /api HTTP/1.1\" 200 42 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"127.0.0.1 - - [04/Oct/2026:06:18:39 +0000] \"GET /nonexistence HTTP/1.1\" 404 27 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"127.0.0.1 - - [04/Oct/2026:06:19:01 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"127.0.0.1 - - [04/Oct/2026:06:19:01 +0000] \"GET /api HTTP/1.1\" 200 42 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"127.0.0.1 - - [04/Oct/2026:06:19:01 +0000] \"GET /nonexistence HTTP/1.1\" 404 28 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"127.0.0.1 - - [04/Oct/2026:06:19:25 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"127.0.0.1 - - [04/Oct/2026:06:19:25 +0000] \"GET /api HTTP/1.1\" 200 42 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"127.0.0.1 - - [04/Oct/2026:06:19:25 +0000] \"GET /nonexistent HTTP/1.1\" 404 28 \"-\" \"-\"","service":"acquisitions-api"}
