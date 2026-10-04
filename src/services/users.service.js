@@ -92,7 +92,6 @@ export const updateUser = async (id, updates) => {
 
 export const deleteUser = async id => {
   try {
-    
     await getUserById(id);
 
     const [deletedUser] = await db

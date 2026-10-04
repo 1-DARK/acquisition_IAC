@@ -1,5 +1,5 @@
 import logger from '#config/logger.js';
-import { signupSchema,signInSchema } from '#validations/auth.validation.js';
+import { signupSchema, signInSchema } from '#validations/auth.validation.js';
 import { formatValidationError } from '#utils/format.js';
 import { jwttoken } from '#utils/jwt.js';
 import { cookies } from '#utils/cookies.js';
@@ -47,7 +47,6 @@ export const signup = async (req, res, next) => {
     next(e);
   }
 };
-
 
 export const signIn = async (req, res, next) => {
   try {
